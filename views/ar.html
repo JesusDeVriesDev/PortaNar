@@ -1,0 +1,28 @@
+
+<div id="ar-wrap">
+  <button id="close-ar" aria-label="Cerrar">×</button>
+
+  <div id="hud">
+    <div class="instruction"><span class="pulse"></span><span id="instruction-text">Buscando un portavasos…</span></div>
+    <div id="dots"></div>
+  </div>
+
+  <div id="cam-loading">
+    <div class="spinner"></div>
+    <p id="cam-loading-text">Activando cámara…</p>
+    <button class="retry" id="retry-cam">Reintentar</button>
+  </div>
+
+  <a-scene id="ar-scene"
+    embedded
+    vr-mode-ui="enabled: false"
+    renderer="antialias: true; alpha: true"
+    ar-hud-updater
+    mindar-image="imageTargetSrc: markers/targets.mind; autoStart: false; uiScanning: no; uiLoading: no; filterMinCF: 0.0001; filterBeta: 0.001;">
+
+    <a-assets></a-assets>
+    <a-entity id="markers"></a-entity>
+    <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false" raycaster="near: 10; far: 10000;"></a-camera>
+  </a-scene>
+  <div id="ar-tags"></div>
+</div>
