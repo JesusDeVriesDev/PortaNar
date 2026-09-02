@@ -1,8 +1,8 @@
 :root{
-  --ink:#1c140d;
+  --ink: #4d4b4b;
   --ink-soft:#7c6247;
-  --paper:#f2e4c8;
-  --paper-soft:#e8d5ac;
+  --paper:#fefcfc;
+  --paper-soft:#7ccb15;
   --ground:#140d07;
   --gold:#c9911f;
   --gold-soft:#e3b256;
@@ -11,10 +11,14 @@
 
   --c0:#a83a1c; /* Galeras */
   --c1:#1f8a93; /* Laguna de la Cocha */
-  --c2:#d19b1f; /* Carnaval de Negros y Blancos */
-  --c3:#8a6339; /* Sombrero de Paja Toquilla */
+  --c2:#000000; /* Carnaval de Negros y Blancos */
+  --c3:#d19b1f; /* Sombrero de Paja Toquilla */
   --c4:#b23a70; /* Orquídeas nariñenses */
   --c5:#c1631f; /* El Cuy */
+
+  --c6: #3b9624;
+  --c7: #c1631f;
+  --c8: #1162be;
 }
 
 *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
@@ -35,15 +39,15 @@ button{ font-family:inherit; }
 /* ---------- Tabbar ---------- */
 #tabbar{
   position:fixed; left:0; right:0; bottom:0; z-index:60; height:64px;
-  display:flex; background:var(--ink); border-top:1px solid rgba(242,228,200,0.1);
+  display:flex; background:var(--ink); border-top:1px solid rgba(247, 246, 245, 0.1);
   padding-bottom: env(safe-area-inset-bottom);
 }
 #tabbar button{
   flex:1; border:none; background:none; cursor:pointer;
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
-  color:#a9906f; font-size:11px; font-weight:600;
+  color:#fffefd; font-size:11px; font-weight:600;
 }
-#tabbar button svg{ width:20px; height:20px; stroke:#a9906f; fill:none; stroke-width:1.6; }
+#tabbar button svg{ width:20px; height:20px; stroke:#fffefe; fill:none; stroke-width:1.6; }
 #tabbar button.active{ color:var(--gold-soft); }
 #tabbar button.active svg{ stroke:var(--gold-soft); }
 #tabbar button.cam{ color:var(--paper); }
@@ -61,7 +65,7 @@ button{ font-family:inherit; }
 
 /* ---------- Inicio ---------- */
 #view-inicio .hero{
-  background: linear-gradient(175deg, #241a10 0%, #140d07 68%);
+  background: linear-gradient(175deg, #241a10 0%, #7e7d7d 68%);
   color:var(--paper); padding: max(28px, env(safe-area-inset-top)) 22px 34px;
   position:relative; overflow:hidden;
 }
@@ -109,12 +113,12 @@ button{ font-family:inherit; }
 .econ-card{ border-radius:14px; padding:16px; border:1px solid var(--line); }
 .econ-card .tag{ font-size:12px; font-weight:700; margin-bottom:6px; }
 .econ-card p{ font-size:13.5px; line-height:1.55; color:#4d3c2a; }
-.econ-card.circular{ background: color-mix(in srgb, var(--c5) 10%, var(--paper)); }
-.econ-card.circular .tag{ color: color-mix(in srgb, var(--c5) 70%, #1c140d); }
-.econ-card.naranja{ background: color-mix(in srgb, var(--c2) 12%, var(--paper)); }
-.econ-card.naranja .tag{ color: color-mix(in srgb, var(--c2) 70%, #1c140d); }
-.econ-card.creativa{ background: color-mix(in srgb, var(--c1) 10%, var(--paper)); }
-.econ-card.creativa .tag{ color: color-mix(in srgb, var(--c1) 70%, #1c140d); }
+.econ-card.circular{ background: color-mix(in srgb, var(--c6) 10%, var(--paper)); }
+.econ-card.circular .tag{ color: color-mix(in srgb, var(--c6) 70%, #1c140d); }
+.econ-card.naranja{ background: color-mix(in srgb, var(--c7) 12%, var(--paper)); }
+.econ-card.naranja .tag{ color: color-mix(in srgb, var(--c7) 70%, #1c140d); }
+.econ-card.creativa{ background: color-mix(in srgb, var(--c8) 10%, var(--paper)); }
+.econ-card.creativa .tag{ color: color-mix(in srgb, var(--c8) 70%, #1c140d); }
 
 .timeline{ margin-top:8px; border-left:2px solid var(--line); padding-left:16px; display:flex; flex-direction:column; gap:16px; }
 .timeline .day .d{ font-size:12px; color:var(--gold); font-weight:700; margin-bottom:3px; }
@@ -141,8 +145,8 @@ button{ font-family:inherit; }
 /* ---------- Impacto ---------- */
 .impact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px; }
 .impact-card{ border-radius:14px; padding:16px 14px; background:var(--ink); color:var(--paper); }
-.impact-card .n{ font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:22px; color:var(--gold-soft); }
-.impact-card .l{ font-size:12px; color:#cbb98f; margin-top:4px; line-height:1.4; }
+.impact-card .n{ font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:22px; color:var(--paper); }
+.impact-card .l{ font-size:12px; color:#babab9; margin-top:4px; line-height:1.4; }
 
 .dye-list{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
 .dye-pill{ font-size:12.5px; padding:8px 12px; border-radius:100px; background:var(--paper-soft); color:#4d3c2a; }
