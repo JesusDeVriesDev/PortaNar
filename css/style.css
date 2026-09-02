@@ -262,7 +262,7 @@ video{
   width: 220px;
   padding:11px 13px 10px;
   border-radius:14px;
-  background: rgba(20,13,7,0.86);
+  background: rgba(130, 129, 129, 0.86);
   backdrop-filter: blur(5px);
   border:1.4px solid var(--accent);
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
